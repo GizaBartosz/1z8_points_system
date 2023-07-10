@@ -11,119 +11,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <script>
+        let points = [0, 0, 0, 0, 0, 0, 0, 0];
 
-        //DLA OSOBY Z PRZYSZŁOŚCI, PRZEPRASZAM ZA TEN STRASZNY KOD ;<
-        let points1 = 0;
-        let points2 = 0;
-        let points3 = 0;
-        let points4 = 0;
-        let points5 = 0;
-        let points6 = 0;
-        let points7 = 0;
-        let points8 = 0;
-    
-        function increasePoints1() {
-          points1 += 10;
-          document.getElementById("points1").innerHTML = points1;
-        }
-        function increasePoints2() {
-          points2 += 10;
-          document.getElementById("points2").innerHTML = points2;
-        }
-        function increasePoints3() {
-          points3 += 10;
-          document.getElementById("points3").innerHTML = points3;
-        }
-        function increasePoints4() {
-          points4 += 10;
-          document.getElementById("points4").innerHTML = points4;
-        }
-        function increasePoints5() {
-          points5 += 10;
-          document.getElementById("points5").innerHTML = points5;
-        }
-        function increasePoints6() {
-          points6 += 10;
-          document.getElementById("points6").innerHTML = points6;
-        }
-        function increasePoints7() {
-          points7 += 10;
-          document.getElementById("points7").innerHTML = points7;
-        }
-        function increasePoints8() {
-          points8 += 10;
-          document.getElementById("points8").innerHTML = points8;
-        }
-        function decreasePoints1() {
-            points1 -= 10;
-            document.getElementById("points1").innerHTML = points1;
+        function increasePoints(index) {
+            points[index] += 10;
+            document.getElementById("points" + (index + 1)).innerHTML = points[index];
         }
 
-        function decreasePoints2() {
-             points2 -= 10;
-             document.getElementById("points2").innerHTML = points2;
+        function decreasePoints(index) {
+            points[index] -= 10;
+            document.getElementById("points" + (index + 1)).innerHTML = points[index];
         }
-
-        function decreasePoints3() {
-            points3 -= 10;
-            document.getElementById("points3").innerHTML = points3;
-        }
-
-        function decreasePoints4() {
-            points4 -= 10;
-            document.getElementById("points4").innerHTML = points4;
-        }
-
-        function decreasePoints5() {
-            points5 -= 10;
-            document.getElementById("points5").innerHTML = points5;
-        }
-
-        function decreasePoints6() {
-            points6 -= 10;
-            document.getElementById("points6").innerHTML = points6;
-        }
-
-        function decreasePoints7() {
-            points7 -= 10;
-            document.getElementById("points7").innerHTML = points7;
-        }
-
-        function decreasePoints8() {
-            points8 -= 10;
-            document.getElementById("points8").innerHTML = points8;
-        }
-
     </script>
 </head>
 
 <body>
     <img src="logo.png" alt="ksad" id="logo">
     <div class="parent">
+
+        <!-- Uczestnik 1 -->
         <div class="div2">
-            <h2 onclick="decreasePoints1()">1</h2>
+            <h2 onclick="decreasePoints(0)">1</h2>
+            <!--Poniżej podmień imię i nazwisko-->
             IMIE<br>NAZWISKO
             <br>
             <div class="lives">
-                <img class="first" src="green.png" alt="ksad" id="zycie11" data-src="green_false.png"repair-src="green.png">
-                <img src="green.png" alt="ksad" id="zycie12" data-src="green_false.png"repair-src="green.png">
-                <img src="green.png" alt="ksad" id="zycie13" data-src="green_false.png"repair-src="green.png">
+                <img class="first" src="green.png" alt="ksad" id="zycie11" data-src="green_false.png" repair-src="green.png">
+                <img src="green.png" alt="ksad" id="zycie12" data-src="green_false.png" repair-src="green.png">
+                <img src="green.png" alt="ksad" id="zycie13" data-src="green_false.png" repair-src="green.png">
             </div>
-            <h1 class="point" id="points1" onclick="increasePoints1()">0</h1>
+            <h1 class="point" id="points1" onclick="increasePoints(0)">0</h1>
         </div>
+
+        <!-- Uczestnik 2 -->
         <div class="div3">
-            <h2 onclick="decreasePoints2()">2</h2>
+            <h2 onclick="decreasePoints(1)">2</h2>
+            <!--Poniżej podmień imię i nazwisko-->
             IMIE<br>NAZWISKO
             <br>
             <div class="lives">
-                <img class="first" src="green.png" alt="ksad" id="zycie11" data-src="green_false.png"repair-src="green.png">
+                <img class="first" src="green.png" alt="ksad" id="zycie11" data-src="green_false.png" repair-src="green.png">
                 <img src="green.png" alt="ksad" id="zycie12" data-src="green_false.png" repair-src="green.png">
                 <img src="green.png" alt="ksad" id="zycie13" data-src="green_false.png" repair-src="green.png">
             </div>
-            <h1 class="point" id="points2" onclick="increasePoints2()">0</h1>
+            <h1 class="point" id="points2" onclick="increasePoints(1)">0</h1>
         </div>
+
+        <!-- Uczestnik 3 -->
         <div class="div4">
-            <h2 onclick="decreasePoints3()">3</h2>
+            <h2 onclick="decreasePoints(2)">3</h2>
+            <!--Poniżej podmień imię i nazwisko-->
             IMIE<br>NAZWISKO
             <br>
             <div class="lives">
@@ -131,21 +68,27 @@
                 <img src="green.png" alt="ksad" id="zycie12" data-src="green_false.png" repair-src="green.png">
                 <img src="green.png" alt="ksad" id="zycie13" data-src="green_false.png" repair-src="green.png">
             </div>
-            <h1 class="point" id="points3" onclick="increasePoints3()">0</h1>
+            <h1 class="point" id="points3" onclick="increasePoints(2)">0</h1>
         </div>
+
+        <!-- Uczestnik 4 -->
         <div class="div5">
-            <h2 onclick="decreasePoints4()">4</h2>
+            <h2 onclick="decreasePoints(3)">4</h2>
+            <!--Poniżej podmień imię i nazwisko-->
             IMIE<br>NAZWISKO
             <br>
             <div class="lives">
-                <img class="first" src="green.png" alt="ksad" id="zycie11" data-src="green_false.png" repair-src="green.png" >
+                <img class="first" src="green.png" alt="ksad" id="zycie11" data-src="green_false.png" repair-src="green.png">
                 <img src="green.png" alt="ksad" id="zycie12" data-src="green_false.png" repair-src="green.png">
                 <img src="green.png" alt="ksad" id="zycie13" data-src="green_false.png" repair-src="green.png">
             </div>
-            <h1 class="point" id="points4" onclick="increasePoints4()">0</h1>
+            <h1 class="point" id="points4" onclick="increasePoints(3)">0</h1>
         </div>
+
+        <!-- Uczestnik 5 -->
         <div class="div6">
-            <h2 onclick="decreasePoints5()">5</h2>
+            <h2 onclick="decreasePoints(4)">5</h2>
+            <!--Poniżej podmień imię i nazwisko-->
             IMIE<br>NAZWISKO
             <br>
             <div class="lives">
@@ -153,10 +96,13 @@
                 <img src="green.png" alt="ksad" id="zycie12" data-src="green_false.png" repair-src="green.png">
                 <img src="green.png" alt="ksad" id="zycie13" data-src="green_false.png" repair-src="green.png">
             </div>
-            <h1 class="point" id="points5" onclick="increasePoints5()">0</h1>
+            <h1 class="point" id="points5" onclick="increasePoints(4)">0</h1>
         </div>
+
+        <!-- Uczestnik 6 -->
         <div class="div7">
-            <h2 onclick="decreasePoints6()">6</h2>
+            <h2 onclick="decreasePoints(5)">6</h2>
+            <!--Poniżej podmień imię i nazwisko-->
             IMIE<br>NAZWISKO
             <br>
             <div class="lives">
@@ -164,10 +110,13 @@
                 <img src="green.png" alt="ksad" id="zycie12" data-src="green_false.png" repair-src="green.png">
                 <img src="green.png" alt="ksad" id="zycie13" data-src="green_false.png" repair-src="green.png">
             </div>
-            <h1 class="point" id="points6" onclick="increasePoints6()">0</h1>
+            <h1 class="point" id="points6" onclick="increasePoints(5)">0</h1>
         </div>
+
+        <!-- Uczestnik 7 -->
         <div class="div8">
-            <h2 onclick="decreasePoints7()">7</h2>
+            <h2 onclick="decreasePoints(6)">7</h2>
+            <!--Poniżej podmień imię i nazwisko-->
             IMIE<br>NAZWISKO
             <br>
             <div class="lives">
@@ -175,10 +124,13 @@
                 <img src="green.png" alt="ksad" id="zycie12" data-src="green_false.png" repair-src="green.png">
                 <img src="green.png" alt="ksad" id="zycie13" data-src="green_false.png" repair-src="green.png">
             </div>
-            <h1 class="point" id="points7" onclick="increasePoints7()">0</h1>
+            <h1 class="point" id="points7" onclick="increasePoints(6)">0</h1>
         </div>
+
+        <!-- Uczestnik 8 -->
         <div class="div9">
-            <h2 onclick="decreasePoints8()">8</h2>
+            <h2 onclick="decreasePoints(7)">8</h2>
+            <!--Poniżej podmień imię i nazwisko-->
             IMIE<br>NAZWISKO
             <br>
             <div class="lives">
@@ -186,25 +138,28 @@
                 <img src="green.png" alt="ksad" id="zycie12" data-src="green_false.png" repair-src="green.png">
                 <img src="green.png" alt="ksad" id="zycie13" data-src="green_false.png" repair-src="green.png">
             </div>
-            <h1 class="point" id="points8" onclick="increasePoints8()">0</h1>
+            <h1 class="point" id="points8" onclick="increasePoints(7)">0</h1>
         </div>
+
     </div>
-     <div class="spons">
-        <img src="technikalia.png" alt="ksad" id="logosanta">
+    <div class="spons">
+        <img src="technikalia.png" alt="ksad" id="logotechnix">
         <img src="sspg.png" alt="ksad" id="logosspg">
     </div>
-</body>
-<script>
-    const images = document.querySelectorAll('.lives img');
 
-    images.forEach(img => {
-        img.addEventListener('click', () => {
-            const src = img.getAttribute('src');
-            const newSrc = img.getAttribute('data-src');
-            const repSrc = img.getAttribute('repair-src');
-            if(src==repSrc) img.setAttribute('src', newSrc);
-            else img.setAttribute('src', repSrc);
+    <script>
+        const images = document.querySelectorAll('.lives img');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                const src = img.getAttribute('src');
+                const newSrc = img.getAttribute('data-src');
+                const repSrc = img.getAttribute('repair-src');
+                if (src == repSrc) img.setAttribute('src', newSrc);
+                else img.setAttribute('src', repSrc);
+            });
         });
-    });
-</script>
+    </script>
+</body>
+
 </html>
